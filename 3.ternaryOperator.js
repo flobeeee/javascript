@@ -52,4 +52,22 @@ console.log(fruits.buyer.status.likeCount) // hello
 
 console.log(fruits.buyer ? fruits.buyer : 'X') // { status: { likeCount: 'hello' } }
 console.log(fruits.buyer && fruits.buyer.status ? fruits.buyer.status : 'X') // { likeCount: 'hello' }
-console.log(fruits.buyer && fruits.buyer.status && fruits.buyer.status.likeCount ? fruits.buyer.status.likeCount  : 'X') // hello
+console.log(fruits.buyer && fruits.buyer.status && fruits.buyer.status.likeCount ? fruits.buyer.status.likeCount : 'X') // hello
+
+// Falsy 한 값
+// false
+// null
+// undefined
+// 0
+// NaN
+// ''
+let data = '안녕'
+
+console.log(false && data ? data : 'X') // X
+console.log(null && data ? data : 'X') // X
+console.log(undefined && data ? data : 'X') // X
+console.log(0 && data ? data : 'X') // X
+console.log(NaN && data ? data : 'X') // X
+console.log('' && data ? data : 'X') // X
+
+
