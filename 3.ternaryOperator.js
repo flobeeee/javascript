@@ -5,10 +5,22 @@ let fruits = {
 }
 
 console.log(fruits.buyer) // hello
-console.log(fruits.buyer.status) // ! 에러 undefined
-// console.log(fruits.buyer.status.likeCount) // ! 에러 Cannot read property 'likeCount' of undefined 
+console.log(fruits.buyer.status) // 에러 undefined
+// console.log(fruits.buyer.status.likeCount) // 에러 Cannot read property 'likeCount' of undefined 
 
 console.log(fruits.buyer ? fruits.buyer : 'X') // hello
+console.log(fruits.buyer && fruits.buyer.status ? fruits.buyer.status : 'X') // X
+console.log(fruits.buyer && fruits.buyer.status && fruits.buyer.status.likeCount ? fruits.buyer.status.likeCount  : 'X') // X
+
+fruits = {
+  buyer: null
+}
+
+console.log(fruits.buyer) // null
+// console.log(fruits.buyer.status) // 에러 Cannot read property 'status' of null 
+// console.log(fruits.buyer.status.likeCount) // 에러 Cannot read property 'likeCount' of undefined 
+
+console.log(fruits.buyer ? fruits.buyer : 'X') // X
 console.log(fruits.buyer && fruits.buyer.status ? fruits.buyer.status : 'X') // X
 console.log(fruits.buyer && fruits.buyer.status && fruits.buyer.status.likeCount ? fruits.buyer.status.likeCount  : 'X') // X
 
@@ -20,7 +32,7 @@ fruits = {
 
 console.log(fruits.buyer) // { status: 'hello' }
 console.log(fruits.buyer.status) // hello
-console.log(fruits.buyer.status.likeCount) // ! 에러 undefined
+console.log(fruits.buyer.status.likeCount) // 에러 undefined
 
 console.log(fruits.buyer ? fruits.buyer : 'X') // { status: 'hello' }
 console.log(fruits.buyer && fruits.buyer.status ? fruits.buyer.status : 'X') // hello
