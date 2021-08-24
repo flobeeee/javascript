@@ -70,4 +70,5 @@ console.log(0 && data ? data : 'X') // X
 console.log(NaN && data ? data : 'X') // X
 console.log('' && data ? data : 'X') // X
 
-
+const ctx = {}
+console.log(ctx.auth && ctx.auth.user && ctx.auth.user.name? ctx.auth.user.name : null) //null
