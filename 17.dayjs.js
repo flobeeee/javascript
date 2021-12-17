@@ -10,7 +10,6 @@ let queryResult = [[
       count: 1
     }
 ]]
-  
 const startDate = '2021-07-01'
 const endDate = '2021-07-05'
 const dateCount = dayjs(endDate).diff(startDate, 'day', true) + 1
@@ -23,7 +22,6 @@ let dateObj = {}
 for (let i = 0; i < dateCount; i++) {
   dateObj[dayjs(endDate).add(-i, 'day').format('YYYY-MM-DD')] = 0
 }
-
 console.log(dateObj)
 
 // 존재하는 날짜 체크
@@ -31,15 +29,22 @@ queryResult[0].map(date => {
   dateObj[date.use_on] = 1
 })
 
+
 console.log(dateObj)
 
 // 없는 날짜 데이터 만들기
-for (let key in dateObj) {
+// for (let key in dateObj) {
+//   if (dateObj[key] === 0) {
+//     queryResult[0].push({use_on: key, count:0})
+//     console.log(key)
+//   }
+// }
+Object.entries(dateObj).forEach(([key, value]) => {
   if (dateObj[key] === 0) {
     queryResult[0].push({use_on: key, count:0})
     console.log(key)
   }
-}
+})
 
 console.log(queryResult[0])
 
