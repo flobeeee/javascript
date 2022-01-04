@@ -1,4 +1,13 @@
 
+// null
+// id 가 아예 없거나 id 가 null 인경우 false로 빠짐
+let guide = { id: 5 }
+console.log(guide['id'] ? 'O' : 'X') // O
+guide = {}
+console.log(guide['id'] ? 'O' : 'X') // X
+guide = { id: null }
+console.log(guide['id'] ? 'O' : 'X') // X
+
 // boolean
 
 function isBoolean(value) {
