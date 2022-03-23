@@ -1,3 +1,11 @@
+// 
+
+const item = {
+  influence: {
+    user : null
+  }
+}
+console.log(item.influence.user && item.influence.user.telAgency && Influence.mobileCarrier[item.influence.user.telAgency]? Influence.mobileCarrier[item.influence.user.telAgency] : '')
 
 // null
 // id 가 아예 없거나 id 가 null 인경우 false로 빠짐
