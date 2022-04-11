@@ -1,5 +1,3 @@
-// 
-
 const item = {
   influence: {
     user : null
@@ -27,7 +25,6 @@ console.log(isBoolean('true')) // true
 console.log(isBoolean(false)) // false
 console.log(isBoolean('false')) // false
 
-return
 
 // 삼항연산자 처리로 에러 막기
 
