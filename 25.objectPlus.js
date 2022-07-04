@@ -19,6 +19,32 @@ function plus(array) {
 
   array.map((el) => {
     Object.keys(el).map(key => {
+      Object.keys(el[key]).map(keykey => {
+        if (!result[key]) {
+          result[key] = {}
+        }
+
+        if (!result[key][keykey]) {
+          result[key][keykey] = el[key][keykey]
+        } else {
+          result[key][keykey] = result[key][keykey] + el[key][keykey]
+        }
+      })
+    })
+  })
+  
+  return result
+}
+
+// 같은 날짜끼리 같은 속성 더하기
+console.log(plus([obj1, obj2, obj3]))
+
+// 하드코딩 (처음 만든 코드)
+function plus1(array) {
+  let result = {}
+
+  array.map((el) => {
+    Object.keys(el).map(key => {
       const valueA = el[key]['a'] ? el[key]['a'] : 0
       const valueB = el[key]['b'] ? el[key]['b'] : 0
       const valueC = el[key]['c'] ? el[key]['c'] : 0
@@ -40,6 +66,3 @@ function plus(array) {
   
   return result
 }
-
-// 같은 날짜끼리 같은 속성 더하기
-console.log(plus([obj1, obj2, obj3]))
