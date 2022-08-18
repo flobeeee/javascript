@@ -1,3 +1,7 @@
+// . 뒤 문자 가져오기
+const file = 'instagram/post/media/2885785501963702584/2885785501963702584.mp4'
+console.log(file.split('.').pop()) // mp4
+
 // ! 최종 함수
 
 function pickUserName(instagramUrl) {
