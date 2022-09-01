@@ -1,3 +1,12 @@
+// 4. 특정 문자만 가능하게
+const tag = '태그_123'
+const account1 = '계정._12'
+
+// 한글 영어 숫자 _(하단바) 가능
+console.log(/^[가-힣a-zA-Z0-9_]+$/.test(tag)) 
+// 한글 영어 숫자 _(하단바) .(마침표) 가능
+console.log(/^[가-힣a-zA-Z0-9_.]+$/.test(account1)) 
+
 // 3. 특정 특수문자 지우기
 
 let hastag = '#코딩'
