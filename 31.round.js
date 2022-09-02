@@ -17,7 +17,8 @@ if (insight) {
 
   const newAdcost = `${adCost.slice(0,-6)}.${adCost.slice(-6)}`
 
-  campaign.adCost = Math.round(newAdcost)
+  campaign.adCost = Math.round(Number(newAdcost))
+  console.log(typeof campaign.adCost) // number
 }
 
 console.log(campaign) // { adCost: 13180 }
