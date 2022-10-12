@@ -1,3 +1,20 @@
+
+// 6. 특정문자 있으면 false
+const str1 = '@1223!sadad';
+
+const regex1 = new RegExp(/^[^!]*$/);
+
+console.log(regex1.test(str1)); // 느낌표 있으면 false 여야함
+
+
+// 5. 특정 문자 있는지 확인
+const str = 'table football';
+
+const regex = new RegExp('!');
+
+console.log(regex.test(str)); // false
+
+
 // 4. 특정 문자만 가능하게
 const tag = '태그_123'
 const account1 = '계정._12'
