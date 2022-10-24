@@ -1,0 +1,28 @@
+{
+  "extends": [
+    // "eslint:recommended"
+  ],
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "overrides": [],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+  "ecmaVersion": 2016
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "space-before-function-paren": "error", // 함수 앞 공백
+    "space-before-blocks": "error", // 블록 앞 공간
+    "object-curly-spacing": ["error", "always", { "objectsInObjects": false }], // 중괄호 내부에 간격 적용
+    "@typescript-eslint/no-explicit-any": ["off"], // any type 사용가능
+    "function-call-argument-newline": ["error", "never"], // 함수 파라미터 새로운 줄
+    "keyword-spacing": ["error", {"overrides": { // 뒤에 공간
+      "if": { "after": true },
+      "while": { "after": true }
+    }}]
+  } 
+}

@@ -4,7 +4,7 @@ console.log(file.split('.').pop()) // mp4
 
 // ! 최종 함수
 
-function pickUserName(instagramUrl) {
+function pickUserName (instagramUrl) {
   if (instagramUrl.includes('instagram.com/')) {
     const urlPath = instagramUrl.split('instagram.com/')
     if (urlPath[urlPath.length - 1].slice(-1) === '/') {

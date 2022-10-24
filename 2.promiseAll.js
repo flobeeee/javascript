@@ -1,4 +1,4 @@
-async function test(text, time) {
+async function test (text, time) {
 	return new Promise((resolved, rejected) => {
 		setTimeout(
 			() =>
