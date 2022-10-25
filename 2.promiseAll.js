@@ -4,8 +4,7 @@ async function test (text, time) {
 			() =>
 				typeof text === 'string'
 					? resolved('문자열 들어옴')
-					: rejected('문자열 아님'),
-			time
+					: rejected('문자열 아님'), time
 		)
 	})
 }

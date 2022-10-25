@@ -1,4 +1,4 @@
-const filters = {"isDisplay": false}
+const filters = { "isDisplay": false }
 
 Object.entries(filters).forEach(([key, value]) => {
   if (typeof value === 'boolean') {

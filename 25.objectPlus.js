@@ -14,7 +14,7 @@ let obj3 = {
   '2022-06-22': { a: 3, b: 1, c: 2 },
 }
 
-function plus(array) {
+function plus (array) {
   let result = {}
 
   array.map((el) => {
@@ -40,7 +40,7 @@ function plus(array) {
 console.log(plus([obj1, obj2, obj3]))
 
 // 하드코딩 (처음 만든 코드)
-function plus1(array) {
+function plus1 (array) {
   let result = {}
 
   array.map((el) => {

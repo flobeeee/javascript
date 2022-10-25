@@ -1,4 +1,4 @@
-function objectToArray(data: object) {
+function objectToArray (data: object) {
   let array = Object.values(data)
   return array
 }

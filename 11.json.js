@@ -13,4 +13,4 @@ const message = {
   number : 999
 }
 
-console.log(JSON.stringify({...message, env:'staging'}))
+console.log(JSON.stringify({ ...message, env:'staging' }))

@@ -41,7 +41,7 @@ console.log(dateObj)
 // }
 Object.entries(dateObj).forEach(([key, value]) => {
   if (dateObj[key] === 0) {
-    queryResult[0].push({use_on: key, count:0})
+    queryResult[0].push({ use_on: key, count:0 })
     console.log(key)
   }
 })
@@ -53,7 +53,7 @@ console.log(queryResult[0])
 //   return new Date(b.use_on) - new Date(a.use_on);
 // });
 
-queryResult[0].sort(function(a,b){
+queryResult[0].sort(function (a,b) {
   return dayjs(b.use_on).valueOf() - dayjs(a.use_on).valueOf();
 });
 

@@ -16,7 +16,7 @@ console.log(guide['id'] ? 'O' : 'X') // X
 
 // boolean
 
-function isBoolean(value) {
+function isBoolean (value) {
   return value === null? null : value === 'true' || value === true? true : false
 }
 console.log(isBoolean(null)) // null

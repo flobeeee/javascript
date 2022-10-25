@@ -36,10 +36,10 @@ const account = '@star'
 console.log(account.replace(/\@/g,'')) // star
 
 
-function regExp(str){  
+function regExp (str) {  
   var reg = /[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/gi
   //특수문자 검증
-  if(reg.test(str)){
+  if (reg.test(str)) {
     //특수문자 제거후 리턴
     return str.replace(reg, "");    
   } else {

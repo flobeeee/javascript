@@ -315,7 +315,7 @@ const data = {
   ]
 }
 
-function extract(data) {
+function extract (data) {
   let extractData = {}
   
   data.items.map(el => {
