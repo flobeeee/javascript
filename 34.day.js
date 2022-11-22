@@ -20,3 +20,8 @@ console.log(b.format()) // 2022-10-05T18:24:34+09:00
 console.log(b.unix())
 
 // unix to date
+
+const endDate = "2022-11-17 23:59:59"
+console.log(endDate.split(' ')[0].split('-')) // [ '2022', '11', '17' ]
+const finishDate = dayjs(endDate)
+console.log(finishDate.year()) // 2022
