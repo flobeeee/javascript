@@ -1,3 +1,17 @@
+// 형식 다루기
+
+const endDate = "2022-11-22 23:59:59"
+console.log(endDate.split(' ')[0].split('-').slice(0,2))
+console.log(endDate.split(' ')[0].split('-'))
+console.log(endDate.split(' ')[0].split('-')[0])
+console.log([ ...endDate.split(' ')[0].split('-'), ...endDate.split(' ')[1].split(':')])
+console.log([ ...endDate.split(' ')[0].split('-'), ...endDate.split(' ')[1].split(':').slice(0,2)])
+console.log([...endDate.split(' ')[0].split('-'), endDate.split(' ')[1].split(':')[0]])
+
+console.log('string'[0].toLocaleUpperCase() + 'string'.slice(1))
+
+console.log(endDate.split(' ')[0].split('-').join(''))
+
 // . 뒤 문자 가져오기
 const file = 'instagram/post/media/2885785501963702584/2885785501963702584.mp4'
 console.log(file.split('.').pop()) // mp4
