@@ -1,3 +1,8 @@
+// 7. 날짜형식 확인
+const date = '2022-11-31'
+const regex2 = new RegExp(/^\d{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$/);
+console.log(regex2.test(date))
+
 
 // 6. 특정문자 있으면 false
 const str1 = '@1223!sadad';
