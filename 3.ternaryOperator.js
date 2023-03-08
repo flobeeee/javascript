@@ -1,3 +1,13 @@
+// 삼항연산자 여러개 처리
+let num1 = 1
+
+console.log(num1 > 0 ? '우' : num1 < 0 ? '좌' : '중앙') // 우
+num1 = -1
+console.log(num1 > 0 ? '우' : num1 < 0 ? '좌' : '중앙') // 좌
+num1 = 0
+console.log(num1 > 0 ? '우' : num1 < 0 ? '좌' : '중앙') // 중앙
+
+
 const item = {
   influence: {
     user : null
