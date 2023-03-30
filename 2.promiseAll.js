@@ -38,3 +38,29 @@ console.timeEnd("소요시간1") // 0.074s
 // 비동기 처리가 실패했을 경우, 즉시 에러를 반환한다.
 
 // 참고 : https://code-masterjung.tistory.com/91
+
+// ! await 주의사항
+
+async function timeSet () {
+	console.time("소요시간3")
+	await	test("3초", 3000)
+	await test("3초", 3000)
+	await test("3초", 3000)
+	console.timeEnd("소요시간3")
+}
+
+timeSet() // 9초가량
+
+async function timeSet1() {
+	console.time("소요시간4")
+	let promise01 = test("3초", 3000)
+	let promise02 = test("3초", 3000)
+	let promise03 = test("3초", 3000)
+	
+	await promise01;
+	await promise02;
+	await promise03;
+	console.timeEnd("소요시간4")
+}
+
+timeSet1() // 3초가량
