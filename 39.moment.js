@@ -15,3 +15,8 @@ console.log(now.day(6)) // 같은 주차 토요일
 const arr = ['1234', '5678']
 
 console.log(arr.join(' '))
+
+const date = moment(1689828000000).format('YYYY년 MM월 DD일 HH:mm:ss');
+console.log(date); // 2023년 07월 20일 13:40:00 
+const date1 = moment(1689829000000).format('YYYY년 MM월 DD일 HH:mm:ss');
+console.log(date1); // 2023년 07월 20일 13:56:40
